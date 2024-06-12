@@ -4,7 +4,7 @@ class Program
 {
     static void Main()
     {
-        // Ask the user to input three numbers
+        // ask user to input three numbers
         Console.Write("Enter the first number: ");
         double num1 = Convert.ToDouble(Console.ReadLine());
 
@@ -14,7 +14,7 @@ class Program
         Console.Write("Enter the third number: ");
         double num3 = Convert.ToDouble(Console.ReadLine());
 
-        // Determine the smallest number
+        // to determine smallest number
         double smallest = num1;
 
         if (num2 < smallest)
@@ -27,7 +27,7 @@ class Program
             smallest = num3;
         }
 
-        // Print the smallest number
+        // to print the smallest number
         Console.WriteLine("The smallest number is: " + smallest);
     }
 }
