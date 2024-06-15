@@ -1,0 +1,32 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Please enter a letter grade: ");
+        string input = Console.ReadLine().ToUpper(); //to make answer automatically uppercase
+
+        switch (input)
+        {
+            case "A":
+                Console.WriteLine("GPA points: 4");
+                break;
+            case "B":
+                Console.WriteLine("GPA points: 3");
+                break;
+            case "C":
+                Console.WriteLine("GPA points: 2");
+                break;
+            case "D":
+                Console.WriteLine("GPA points: 1");
+                break;
+            case "F":
+                Console.WriteLine("GPA points: 0");
+                break;
+            default:
+                Console.WriteLine("Wrong Letter Grade!");
+                break;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Please enter a year: ");
+        int year = Convert.ToInt32(Console.ReadLine());
+
+        if (IsLeapYear(year))
+        {
+            Console.WriteLine($"{year} is a leap year.");
+        }
+        else
+        {
+            Console.WriteLine($"{year} is not a leap year.");
+        }
+    }
+
+    static bool IsLeapYear(int year)
+    {
+        // leap year is logic
+        // is considered a leap year if divisible by 4,
+        // but not if it is divisible by 100, unless it is also divisible by 400
+        if (year % 4 == 0)
+        {
+            if (year % 100 == 0)
+            {
+                if (year % 400 == 0)
+                {
+                    return true; // divisible by 400
+                }
+                else
+                {
+                    return false; // divisible by 100 but not 400
+                }
+            }
+            else
+            {
+                return true; // divisible b 4 but not by 100
+            }
+        }
+        else
+        {
+            return false; // not divisible by 4
+        }
+    }
+}
