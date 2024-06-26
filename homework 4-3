@@ -1,0 +1,63 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        createAccount();
+    }
+
+    static bool checkAge(int birth_year)
+    {
+        // calculate the age based on the birth_year
+        int age = 2022 - birth_year;
+
+        // see if age is greater than or equal to 18
+        if (age >= 18)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    static void createAccount()
+    {
+        // ask user to input username
+        Console.WriteLine("Enter username:");
+        string username = Console.ReadLine();
+
+        // ask user to input password
+        Console.WriteLine("Enter password:");
+        string password1 = Console.ReadLine();
+
+        // ask user to input password again
+        Console.WriteLine("Enter password again:");
+        string password2 = Console.ReadLine();
+
+        // ask user to input birth year
+        Console.WriteLine("Enter your birth year:");
+        int birthYear = int.Parse(Console.ReadLine());
+
+        // check age using checkAge method
+        if (checkAge(birthYear))
+        {
+            // if age is 18 or older, check if passwords match
+            if (password1 == password2)
+            {
+                Console.WriteLine("Account is created successfully");
+            }
+            else
+            {
+                Console.WriteLine("Wrong password");
+            }
+        }
+        else
+        {
+            // age is less than 18
+            Console.WriteLine("Could not create an account");
+        }
+    }
+}
